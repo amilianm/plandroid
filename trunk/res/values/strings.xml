@@ -2,4 +2,7 @@
 <resources>
     
     <string name="app_name">PlanningPoker</string>
+
+<string name="my_choice">Mon choix :</string>
+<string name="ok">Ok</string>
 </resources>

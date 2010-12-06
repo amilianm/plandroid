@@ -12,7 +12,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 public class PlanningPoker extends Activity implements StoryPointAdapterListener {
-    /** Called when the activity is first created. */
+	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
@@ -38,12 +38,12 @@ public class PlanningPoker extends Activity implements StoryPointAdapterListener
         setListAdapter(adapter);*/
     }
 
-	public void onClickNumber(StoryPoint item, int position) {
+	public void onClickNumber(StoryPoint storyPoint, int position) {
 		Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("Planning Poker");
-		builder.setMessage("Mon choix : " + item.getLabel());
-		builder.setPositiveButton("Oui", null);
-		builder.setNegativeButton("Non", null);
+		builder.setTitle(getString(R.string.app_name));
+		builder.setMessage(getString(R.string.my_choice) + " " + storyPoint.getLabel());
+		builder.setPositiveButton(getString(R.string.ok), null);
 		builder.show();
 	}
+	
 }
